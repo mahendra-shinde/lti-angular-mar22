@@ -1,0 +1,35 @@
+<div>
+<p>Add new product</p>
+<table>
+	<tr>
+	<td>
+<form #productForm="ngForm" (ngSubmit)="productForm.valid && save(product)" novalidate>
+	Product ID :<input type="text"  name="productIdCtl" [(ngModel)]="product.productId"  /> <br/>
+	Name: <input type="text" name="pname" [(ngModel)]="product.name" /> <br/>
+	Description : <textarea name="descr" [(ngModel)]="product.description" ></textarea> <br/>
+	Is available : <input type="checkbox" name="avail" [(ngModel)]="product.isAvailable" />
+	<input type="submit" value="save" />
+	
+	<div *ngIf="productIdCtl.invalid" >
+		Invalid ProductID
+	<div *ngIf="productIdCtl.errors?.['min']">
+		Product ID Must be Greater than or equal to 100
+	</div>
+
+	  <div *ngIf="productIdCtl.errors?.['required']">
+		Kindly Enter product id
+	  </div>
+	</div>
+</form>
+</td>
+<td>
+<div>
+	Product ID : {{product.productId}} <br/>
+	Name : {{product.name}} <br/>
+	Description : {{product.description}} <br/>
+	Is Available : {{product.isAvailable}} <br/>
+</div> 
+</td>
+</tr>
+</table>
+</div> 

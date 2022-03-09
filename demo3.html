@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>JS Arrays</title>
+	<script>
+		// In General Arrays contain "Data of Same TYPE"
+		// In JavaScript, array can contain heterogeneous data !
+		// Syntax 1
+		data = new Array();
+		data[0] = "Mahendra Shinde";
+		data[1] = 38;
+		data[2] = false;
+
+		// Syntax 2 / JSON /
+		data2 = ['Steve Jobs',72,true];
+
+		function showArray1(){
+			d1 = document.getElementById("d1");
+			d1.innerHTML = "";
+			for(i=0;i<data.length;i++){
+				//DOM Manipulation
+				d1.innerHTML +=  "<li>"+data[i]+"</li>";
+			}
+		}
+		function showArray2(){
+			d1 = document.getElementById("d1");
+			d1.innerHTML = "";
+			for(i=0;i<data2.length;i++){
+				d1.innerHTML +=  "<li>"+data2[i]+"</li>";
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<h1>Data from Array </h1>
+	<ol id="d1">
+	</ol>
+	<a href="#" onclick="showArray1()">Array 1</a>
+	<a href="#" onclick="showArray2()">Array 2</a>
+</body>
+</html>

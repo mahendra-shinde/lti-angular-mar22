@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Home Page</title>
+	<style>
+	body, h1 {
+		margin:0px;
+	}
+	h1 {
+		background-color: blanchedalmond;
+	}
+	h1, p {
+		padding: 5px;
+	}
+		.para {
+			border: 2pt solid yellowgreen;
+		}
+	</style>
+	<script>
+	window.onload = function(){
+		document.getElementsByTagName("h1")[0].onclick = function(){
+			alert("Hi There !");
+			document.getElementsByTagName("p")[0].className="para";
+		}
+	}		
+	</script>
+</head>
+<body>
+	<h1>Solar System</h1>
+	<p>
+		The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+	</p>
+</body>
+</html>

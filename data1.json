@@ -1,0 +1,18 @@
+{
+	"country-name": "India",
+	"capital-city":"New Delhi",
+	"continent":"Asia",
+	"states":[
+		"Maharshtra",
+		"Gujrat",
+		"Delhi",
+		"Madhyapradesh",
+		"Andhra pradesh",
+		"Punjab",
+		"Rajasthan",
+		"Telangana",
+		"Karnataka"
+		"Tamilnadu",
+		"Kerala"
+	]
+}

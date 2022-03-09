@@ -1,0 +1,19 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+h1, h2, h3 {
+	margin: 0px;
+	padding: 12px;
+	border-left: 15px solid black;
+	background-color: lightgray;
+}
+p {
+	padding: 10px;
+}
+UL {
+	border: 1pt dotted blue;
+	width: 600px;
+	padding: 10px;
+	margin-left: 50px;
+}

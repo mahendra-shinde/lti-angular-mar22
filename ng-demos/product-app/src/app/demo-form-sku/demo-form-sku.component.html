@@ -1,0 +1,27 @@
+<div class="ui raised segement">
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<h2 class="ui header">Form Demo</h2>	
+	<form #myForm="ngForm" (ngSubmit)="myForm.valid && onSubmit(productName)" class="ui form" >
+
+		<div class="field">
+			<label for="productNameInput">Product Name</label>
+			<input type="text" id="productNameInput" 
+				#productNameCtl="ngModel" [(ngModel)]="productName" 
+				name="productNameCtl"
+				class="form-control"
+				required minlength="4">
+		</div>
+		<input type="submit" class="btn btn-secondary" value="save"/>
+	</form>
+	<div *ngIf="productNameCtl.errors?.['required']" class="alert alert-danger">
+		Product Name is MANDATORY !
+	</div>
+	<div *ngIf="productNameCtl.errors?.['minlength']" class="alert alert-danger">
+		Product Name Must contain at least 4 characters
+	</div>
+</div></div>
+</div></div>
+

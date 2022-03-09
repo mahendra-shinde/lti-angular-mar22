@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Employee records</title>
+	<script src="jquery-3.6.0.js"></script>
+
+	<link type="text/css" rel="stylesheet" href="main.css"/>
+	<style>
+		table{
+			margin:20px;
+			border: 1pt solid coral;
+		}
+		table thead {
+			background-color: coral;
+			border-bottom: 1ps solid red;
+			border-top: 5px solid blue;
+			padding: 20px;
+		}
+	</style>
+	<script>
+	$(document).ready(function(){
+		$.getJSON('http://dummy.restapiexample.com/api/v1/employees',function (data){
+			processResponse(data);
+		});
+		
+	});
+
+	function processResponse(response){
+		console.log("Message from Server :"+response.message);
+		console.log("Records :"+response.data.length);
+		for(i=0;i<response.data.length;i++){
+			row = response.data[i];
+			$("#d1").append("<tr><td>"+row.id+"</td><td>"+row.employee_name+"</td><td>"+row.employee_age+"</td><td>"+row.employee_salary+"</td></tr>");
+		}
+	}
+	</script>
+</head>
+<body>
+	<h1>Employee Details </h1>
+	<table cellspacing="0" cellpadding="10" width="500">
+		<thead>
+			<tr>
+				<th>Employee ID</th>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Salary</th>
+			</tr>
+		</thead>
+		<tbody id="d1"></tbody>
+	</table>
+</body>
+</html>

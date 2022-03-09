@@ -1,0 +1,27 @@
+<h2>List of Products</h2>
+
+<table class="table">
+	<thead class="thead-dark">
+		<th>Product ID</th>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Order Now!</th>
+	</thead>
+	<tbody *ngFor="let p of productList">
+		<tr>
+			<td>{{p.productId}}</td>
+			<td>{{p.name}}</td>
+			<td>{{p.description}}</td>
+			<td>
+				<!-- Example of PROPERTY BINDING
+					HTML Button has property disabled, which when set to TRUE will make button INACTIVE
+					We mapped it to 'p.isAvailable' with "!"
+					What does it mean?
+					Ans: When given product is 'available', button will be ACTIVE
+						 But of product is NOT available, button will be DISABLED
+				-->
+				<input type="button" class="btn btn-primary" value="Order Now" [disabled]="!p.isAvailable"/>
+			</td>
+		</tr>
+	</tbody>
+</table>
